@@ -1,0 +1,14 @@
+.styledFont {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    color: #000;
+}
+#styledImage {
+    border: 2px solid #333;
+    padding: 10px;
+}
+#styledImage p {
+    color: #000;
+    font-size: large;
+    margin-bottom: 10px;
+}
