@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.jpg" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi, I'm <span>Abiodun</span><br>Barry</h1>
+        </div>
+    </div>
+</div>
+<!---------about-------------->
+ <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm a passionate and results-driven professional with a dual expertise in cybersecurity analysis and web development. As a cybersecurity analyst, I specialize in identifying and mitigating potential threats to ensure the integrity and security of digital systems. My skills include vulnerability assessments, penetration testing, and implementing robust security measures to safeguard sensitive information. On the flip side, I'm equally adept at web development, where I bring creativity and technical proficiency to the digital realm. From crafting visually appealing and user-friendly interfaces to ensuring seamless functionality, I thrive on turning innovative ideas into reality. My proficiency spans across front-end and back-end technologies, allowing me to create dynamic and responsive web applications. With a commitment to staying ahead of the ever-evolving landscape of cybersecurity and web development, I continuously enhance my skills and stay informed about the latest industry trends. My goal is to contribute to a secure and efficient digital world by combining my analytical mindset with my creative problem-solving skills. Let's connect and explore how my diverse skill set can bring value to your projects.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span><UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Building iOS/Android apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Cybersecurity GRC Analyst at Shuttle lane Limited</li>
+                        <li><span>2022</span><br>Internship Cybersecurity GRC at TechDicto</li>
+                        <li><span>2015 - 2022</span><br>Customer Support Associate at MTN</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024</span><br>Web Development Training through SkillHat Scholarship</li>
+                        <li><span>2022</span><br>Building IT Capacity GRC at Winfinite Consulting</li>
+                        <li><span>2011</span><br>BSC from UNAAB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>   
+<!--------contact----------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left"></div>
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-sharp fa-solid fa-paper-plane"></i>contact@example.com</p>
+            <p><i class="fa-sharp fa-solid fa-phone-volume"></i>0123456789</p>
+            
+            <div class="social-icons">
+                <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+               
+                <div>
+                    <a href="" class="btn btn2">Download Resume</a>
+
+               </div> 
+
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+ <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+ </script>
+</body>
+</html>
